@@ -63,7 +63,7 @@
 			</head>
 			<body>
 				<div class="topnav">
-					<a  href="homepage.html">HOME</a>
+					<a  href="index.html">HOME</a>
 					<a class="active" href="cv.xml" target="_blank">CV AND SKILLS</a>
 					<a href="recipes.html" target="_blank">RECIPES</a>
 					<a href="sports.html" target="_blank">SPORTS</a>
