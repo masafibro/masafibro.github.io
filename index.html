@@ -1,0 +1,292 @@
+<html>
+<head>
+	<title>Homepage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+
+		.text{
+			font-size: 24;
+			font-weight: bold;
+			background-color: #e0dfdc;
+			opacity:0.8;
+			width: 200px;
+		}
+
+		.topnav {
+			background-color: black;
+			opacity:0.8;
+			overflow: hidden;
+		}
+
+		.topnav a {
+			float: left;
+			color: #eb78af;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+
+		.topnav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+
+		.topnav a.active {
+			background-color: #ddd;
+			color: black;
+		}
+
+		body { 
+		background-image:url('https://media.giphy.com/media/10X5oVBTgURLtC/giphy.gif'); 
+		background-repeat:repeat; 
+		font-weight: bold;
+		color:#eb78af;
+		font-family: "arial", arial, sans-serif;}
+
+
+		.row {
+			display: flex;
+			flex-direction: column;
+			padding: 5%;
+			justify-content: center;
+			width: 80%;
+			margin-left: 5%;
+			background: #eb78af;
+		}
+
+		.column {
+			display: flex;
+			margin-top: 5%;
+			justify-content: space-around;
+			background-color: #eb78af;
+		}
+
+		.column img {
+			width:100px;
+			height:120px;
+			border: 5px solid white;
+		}
+
+		.intro{
+			display: inline-block; 
+			text-align: center; 
+			margin-left: auto; 
+			background-color: black; 
+			margin-right: auto; 
+			position: absolute; 
+			left: 0; 
+			right: 0; 
+			top:100; 
+			bottom:50; 
+			width: 500px; 
+			height: 200px; 
+			opacity:0.8
+		}
+
+		.click{
+			display: inline-block; 
+			text-align: center; 
+			margin-left: auto;  
+			margin-right: auto; 
+			position: absolute; 
+			left: 0; 
+			right: 0; 
+			top:300; 
+			bottom:50; 
+			width: 900px; 
+			height: 600px; 
+			opacity:1
+			border-width:5px;  
+    		border-style:groove;
+		}
+
+		.filler{
+			display: flex;
+			align-items: center; 
+			width: 600px; 
+			height: 100px;
+		}
+
+		
+		.modal {
+			display: none;
+			position: absolute;
+			left: 50%;
+			top: 50%; 
+			margin-left: -250px;
+			margin-top: -250px;
+			z-index: 10;
+			padding-top: 100px;
+			color: #eb78af;
+			width: 600px;
+			height: 200px;
+			overflow: auto;
+			background-color: #e0dfdc;
+			opacity: 1 !important;
+			align-items: center;
+			border-width:5px;  
+    		border-style:groove;
+			
+		}
+
+		
+		.modal-content {
+			background-color: #e0dfdc;
+			margin: auto;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 80%;
+		}
+
+		
+		.close {
+			color: #aaaaaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		
+
+	</style>
+</head>
+<body>
+	<div class="topnav">
+		<a class="active" href="homepage.html">HOME</a>
+		<a href="cv.xml" target="_blank">CV AND SKILLS</a>
+		<a href="recipes.html" target="_blank">RECIPES</a>
+		<a href="sports.html" target="_blank">SPORTS</a>
+		<a href="music.html" target="_blank">MUSIC</a>
+		<a href="game.html.html" target="_blank">PLAY A GAME</a>
+	</div><br>
+</hr>
+<div class = "intro">
+	<p>
+		<h1>Arwa Abdulhuk</h1>
+		<h2>Hi there! I'm Arwa; an aspiring<br>
+			programmer, baker, and<br> cat enthusiast.</h2>
+		</p>
+	</div>
+	<br>
+	<div class = "click">
+		<div style="background-color: black; opacity:0.8"><h1>Click on one of the cats to get to know them!</h1></div>  
+		<div class="row">
+			<div class="column">
+				<img src="ash.jpeg" onclick="ash()">
+				<img src="flippy.jpeg" onclick="flippy()">
+				<img src="muffins.jpeg" onclick="muffins()">
+				<img src="psycho.jpeg" onclick="psycho()">
+				<img src="oscar.jpeg" onclick="oscar()">
+			</div>
+			<div class="column" style="margin-bottom: 5%;">
+				<img src="tyga.jpeg" onclick="tyga()">
+				<img src="sunshine.jpeg" onclick="sunshine()">
+				<img src="nori.jpeg" onclick="nori()">
+				<img src="snowy.jpeg" onclick="snowy()">
+				<img src="yuri.jpeg" onclick="yuri()">
+			</div>
+		</div></div>
+
+
+		<div id="catModal" class="modal">
+			
+			<div class = "filler" >
+				<table style = "border:0">
+					<tr><td colspan="3"><span class="close">&times;</span></td></tr>
+					<tr>
+						<td><img id = "newpic" src = "" style="width: 200px; height: 240px; border: 5px solid black;"></td>
+						<td></td>
+						<td><span class = "text" id = "new"></span></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+
+		var modal = document.getElementById("catModal");
+
+		function ash(){
+			document.getElementById("newpic").src='ash.jpeg';
+			document.getElementById("new").innerHTML = "This is Ash! He gets his name from the amber color in his eyes. He's relatively shy but is always happy to recieve treats and food! He lives in the staircase of DIC metro station.";
+			modal.style.display="block";
+
+
+		}
+
+		function flippy(){
+			document.getElementById("newpic").src='flippy.jpeg';
+			document.getElementById("new").innerHTML = "This is Flippy! He lives in pizza hut in knowledge village. He's really chuncky; full of pizza and love! Loves ear scratches!";
+			modal.style.display="block";
+		}
+
+		function muffins(){
+			document.getElementById("newpic").src='muffins.jpeg';
+			document.getElementById("new").innerHTML = "This is Muffins! She's very loud but that's only her way of saying thank you when you give her food. She loves chasing birds and is an independent cat that doesn't need a human. (She will still let you pet her though). She lives in tecom.";
+			modal.style.display="block";
+		}
+
+		function psycho(){
+			document.getElementById("newpic").src='psycho.jpeg';
+			document.getElementById("new").innerHTML = "This is Psycho! He's a very cuddly sweet heart. He's missing one leg and has epilepsy; that doesn't stop him for running around and playing. He loves lying on his back in the grass.";
+			modal.style.display="block";
+		} 
+
+		function oscar(){
+			document.getElementById("newpic").src='oscar.jpeg';
+			document.getElementById("new").innerHTML = "This is Oscar! He loves food, especially tuna flavored cat food. He is tyga's older brother by foster. People don't play with him much since they always like to play with the baby tyga. However, he's very sneaky and feirce when playing with a string. He lives at ZOOM near DIC metro station.";
+			modal.style.display="block";
+		} 
+
+		function tyga(){
+			document.getElementById("newpic").src='tyga.jpeg';
+			document.getElementById("new").innerHTML = "This is Tyga! She is very active and playful. She sits on everyone's lap and will eat your fingers, given the chance! She is Oscar's baby sister";
+			modal.style.display="block";
+		}
+
+		function sunshine(){
+			document.getElementById("newpic").src='sunshine.jpeg';
+			document.getElementById("new").innerHTML = "This is Sunshine! She is super shy but will appreciate food. She is nori's sister and almost never leaves his side. She is also friends with ash since they live together in the metro station staircase.";
+			modal.style.display="block";
+		}
+
+		function nori(){
+			document.getElementById("newpic").src='nori.jpeg';
+			document.getElementById("new").innerHTML = "This is Nori! His name means seaweed in Japanese. He was named nori because of his seaweed-colored spots. He is Sunshine's brother but he is the total oppposite of her. He loves people and is very cuddly.";
+			modal.style.display="block";
+		}
+
+		function snowy(){
+			document.getElementById("newpic").src='snowy.jpeg';
+			document.getElementById("new").innerHTML = "This is Snowy! He was my home cat and best friend. He has heterochromia; two different colored eyes!. He died on 13-Februaury-2019 when he was 6 years old. He was a very happy and naughty cat. He loved smoked turkey and treats. Rest in peace, snowy...";
+			modal.style.display="block";
+		}
+
+		function yuri(){
+			document.getElementById("newpic").src='yuri.jpeg';
+			document.getElementById("new").innerHTML = "This is Yuri! Although Yuri is a boy name, Yuri here is a girl. She lives in the Metro Central Hotel Cafe. She loves hanging out with customers and rolling in the grass.";
+			modal.style.display="block";
+		}
+
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+
+		document.getElementsByClassName("close")[0].onclick = function() {
+			modal.style.display = "none";
+		}
+
+
+	</script>
+	</html>

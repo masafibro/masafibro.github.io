@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="cv.xsl"?>
+<cv>
+	<person>
+		<name>Arwa Abdulhuk</name>
+		<number>0565066797</number>
+		<dob>5/April/1999</dob>
+		<email>arwaabdulhaq1d.aa@gmail.com</email>
+		<nationality>Egyptian</nationality>
+		<image>arwa.jpg</image>
+		<qualifications>
+		<skill>java programming</skill>
+		<skill>SQL</skill>
+		<skill>MONGOdb</skill>
+		<skill>Arabic</skill>
+		<skill>English</skill>
+		<skill>HTML</skill>
+		<skill>XML, XSLT</skill>
+	</qualifications>
+	</person>
+	<education>
+		<ed>IGCSE</ed>
+		<ed>Cambridge AS level</ed>
+		<ed>Cambridge A level</ed>
+		<ed>4.05 GPA</ed>
+		<ed>Undergoing Bachelor of Computer Science at UOWD</ed>
+		<ed>IELTS 7.5</ed>
+	</education>
+	<activities>
+		<hobbie>Table Tennis</hobbie>
+		<hobbie>Badminton</hobbie>
+		<hobbie>Teaching</hobbie>
+		<managing>Charity Club</managing>
+		<managing>Table Tennis Captain</managing>
+	</activities>
+</cv>
